@@ -1,7 +1,13 @@
 import { StartConection } from "./StartConection";
+const types = ['usb','remote','bluetooth'];
 
-let startConection = new StartConection('remote');
-startConection.openConnection()
-startConection.start()
-startConection.stop()
-startConection.destroy()
+types.forEach(type => {
+    console.log('TESTANDO: ' + type)
+    let startConection = new StartConection(type);
+    startConection.openConnection()
+    startConection.start()
+    startConection.stop()
+    startConection.destroy()
+});
+
+
