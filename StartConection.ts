@@ -19,8 +19,21 @@ export class StartConection {
         }    
     }
 
+    openConnection(){
+        this.connection()
+    }
+
     start() {
         this.conexao.start();
+    }
+
+    stop() {
+        this.conexao.stop();
+    }
+
+    destroy() {
+        console.log('destroy')
+        delete this.conexao
     }
 }
 

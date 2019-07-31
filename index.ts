@@ -1,6 +1,7 @@
 import { StartConection } from "./StartConection";
 
-function start(){
-    let startConection = new StartConection('usb');
-    startConection.start()
-}
+let startConection = new StartConection('remote');
+startConection.openConnection()
+startConection.start()
+startConection.stop()
+startConection.destroy()
